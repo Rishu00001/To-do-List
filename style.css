@@ -86,7 +86,6 @@ ul li {
     
 }
 ul li:hover {
-    background-color: rgb(211, 233, 211) ;
     transform: translateY(-2px);
 }
 
