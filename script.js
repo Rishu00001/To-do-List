@@ -1,4 +1,3 @@
-console.log("hi");
 const inputbox = document.getElementById("inputbox");
 const addbtn = document.getElementById("addbtn");
 const todolist = document.getElementById("todolist");
@@ -6,7 +5,7 @@ const todolist = document.getElementById("todolist");
 let editTodo = null;
 
 const addtodo = () => {
-  const inputText = inputbox.value.trim();
+  const inputText = inputbox.value.trim();//used trim to remove extra spaces
   if (inputText.length <= 0) {
     alert("You must add a to-do to save");
     return;
@@ -28,13 +27,12 @@ const addtodo = () => {
 
 const createTodoElement = (todo) => {
   const li = document.createElement("li");
-
   // Create a checkbox
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
   checkbox.classList.add("todo-checkbox");
   checkbox.checked = todo.completed; 
-  checkbox.addEventListener('change', () => {
+  checkbox.addEventListener('click', () => {
     todo.completed = checkbox.checked; 
     updateLocalTodoStatus(todo); 
     li.classList.toggle('checked', todo.completed); 
@@ -46,6 +44,7 @@ const createTodoElement = (todo) => {
   p.innerHTML = todo.text;
   li.appendChild(p);
 
+  //Added a edit button to the list
   const editbtn = document.createElement("button");
   editbtn.innerText = "Edit";
   editbtn.classList.add("btn", "editbtn");
@@ -57,6 +56,7 @@ const createTodoElement = (todo) => {
   });
   li.appendChild(editbtn);
 
+  //Added a delete button to the list with inner text "Remove"
   const deletebtn = document.createElement("button");
   deletebtn.innerText = "Remove";
   deletebtn.classList.add("btn", "deletebtn");
@@ -113,4 +113,6 @@ const updateLocalTodoStatus = (todo) => {
 };
 
 document.addEventListener("DOMContentLoaded", getLocalTodos);
+
+//Give a click handler function to the click event on add button
 addbtn.addEventListener("click", addtodo);
