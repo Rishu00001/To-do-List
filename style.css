@@ -8,7 +8,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, rgba(232, 238, 238, 0.8), rgba(200, 220, 240, 0.8));
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
     font-size: 16px;
     height: 100vh;
 }
@@ -26,9 +26,8 @@ body {
     max-width: 500px; 
     text-align: center;
     padding: 20px;
-    background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 5px #6597b8;
 }
 
 .inputcontainer input {
