@@ -10,6 +10,7 @@
 body {
     background: linear-gradient(135deg, rgba(232, 238, 238, 0.8), rgba(200, 220, 240, 0.8));
     font-size: 16px;
+    height: 100vh;
 }
 
 .container {
@@ -83,9 +84,8 @@ ul li {
     justify-content: space-between;
     transition: background-color 0.3s, transform 0.2s;
     box-shadow: 2px 2px 4px;
+    
 }
-
-
 ul li:hover {
     background-color: #f0f0f0;
     transform: translateY(-2px);
@@ -122,3 +122,17 @@ ul li p {
 .editbtn:hover {
     color: #4caf50;
 }
+.inputcontainer h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inputcontainer h1 img{
+    width: 0.7em;
+    margin-left: 7px;
+}
+
+.checked {
+    background-color: lightgreen; 
+}
+
